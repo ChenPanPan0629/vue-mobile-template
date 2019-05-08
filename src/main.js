@@ -4,10 +4,17 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import api from '@/api'
+import config from './config'
 import '@/libs/filter'
 import '@/assets/styles/common.less'
 import FastClick from 'fastclick'
 FastClick.attach(document.body)
+
+if (config.useVConsole) {
+  const VConsole = require('vconsole')
+  window.vConsole = new VConsole()
+}
+
 Vue.config.productionTip = false
 
 new Vue({

@@ -15,7 +15,7 @@ if (config.useVConsole) {
   const VConsole = require('vconsole')
   window.vConsole = new VConsole()
 }
-
+console.log('hello world')
 Vue.config.productionTip = false
 
 new Vue({
